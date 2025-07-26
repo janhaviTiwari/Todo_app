@@ -138,10 +138,12 @@ function TodoApp() {
                   value={task.due || ""}
                   onChange={(e) => handleDueDate(tasks.indexOf(task), e.target.value)}
                 />
-                <button onClick={() => handleEdit(tasks.indexOf(task), task.text)}>
-                  Edit
-                </button>
-                <button onClick={() => handleDelete(tasks.indexOf(task))}>Delete</button>
+                <div className="task-actions">
+                  <button onClick={() => handleEdit(tasks.indexOf(task), task.text)}>
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete(tasks.indexOf(task))}>Delete</button>
+                </div>
               </>
             )}
           </li>
